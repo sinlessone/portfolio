@@ -48,7 +48,7 @@ const MusicPlayer = () => {
                 if (!audioRef.current) return
 
                 audioRef.current.play();
-                audioRef.current.volume = 0.4
+                audioRef.current.volume = 0.3
                 setDuration(audioRef.current.duration)
                 if (!playing) {
                     setPlaying(true);
@@ -107,7 +107,6 @@ const MusicPlayer = () => {
 
                 onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
                 onLoadedMetadata={(e) => {
-                    console.log(e.currentTarget.duration)
                     setDuration(e.currentTarget.duration);
                 }}
                 onDurationChange={(e) => {
