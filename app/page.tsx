@@ -1,69 +1,124 @@
+import Link from "next/link";
 import Image from "next/image";
+import { FaJsSquare, FaNodeJs } from "react-icons/fa";
+import { SiTypescript, SiDiscorddotjs, SiTailwindcss } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import MusicPlayer from "@/components/musicPlayer";
+import Contacts from "@/components/contacts";
+
+
+
+
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    return (
+        <div className={"flex items-center justify-center h-screen "}>
+            <div className={"flex flex-col items-center justify-center gap-4"}>
+                    <div className={"flex flex-row columns-2 gap-4"}>
+
+                        <div className={"flex flex-col gap-4"}>
+                            {/*main card*/}
+
+                            <div className={"outline outline-[#1f1f21] bg-[#131314] p-4 rounded-lg"}>
+                                <div className={"flex items-center justify-center"}>
+                                    <Image src={"/pfp.webp"} alt={"pfp"} width={60} height={60} className={"rounded-full"}></Image>
+                                </div>
+                                <div className={"flex flex-row whitespace-nowrap w-full gap-5 p-4"}>
+                                    <span className={"text-gray-200 text-3xl shimmer shimmer-color-purple-400 shimmer-duration-3000"}>Moh</span>
+                                    <div className={"h-px w-full translate-y-5 from-white/50 to-gray-800 bg-linear-to-r"}></div>
+                                </div>
+                                <div className={"flex items-center justify-center text-gray-500 shimmer shimmer-color-blue-400 shimmer-duration-4000"}>
+                                    <div className={"flex flex-row gap-12"}>
+                                        <span>Developer</span>
+                                        <span>·</span>
+                                        <span>Music Enthusiast</span>
+                                        <span>·</span>
+                                        <span>Student</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {/*about me*/}
+                            <div className={"outline outline-[#1f1f21] bg-[#131314] p-4 rounded-lg w-125"}>
+                                <div className={"flex items-center justify-center"}>
+                                    <span>Who am I?</span>
+                                </div>
+                                <div className={"text-center"}>I am Moh, a 17 year old student from Algeria, I specialize in creating discord bots in Discordjs <SiDiscorddotjs color={"#35376A"} className={"inline-block"}/> and currently learning full stack to create websites in NextJS <RiNextjsFill color={"#35376A"} className={"inline-block"}/>, and always eager to learn more</div>
+                            </div>
+
+                            {/*tech stack*/}
+                            <div className={"outline  outline-[#1f1f21] rounded-lg p-4 pt-2 bg-[#131314] w-125"}>
+                                <div className={"flex items-center justify-center"}>
+                                    <span className={"text-gray-400 text-lg pb-2"}>Tech Stack</span>
+                                </div>
+                                <div className={"flex flex-wrap gap-3 select-none items-center justify-center"}>
+                                    <div className={"flex flex-row outline outline-[#1f1f21] px-2 py-1 rounded-sm gap-1 transition-colors hover:bg-[#5865f2] duration-300"}>
+                                        <SiDiscorddotjs className={"translate-y-1"}></SiDiscorddotjs>
+                                        DiscordJS
+                                    </div>
+                                    <div className={"flex flex-row outline outline-[#1f1f21] px-2 py-1 rounded-sm gap-1 transition-colors hover:bg-[#19b9f2] duration-300"}>
+                                        <SiTailwindcss className={"translate-y-1"}></SiTailwindcss>
+                                        Tailwind
+                                    </div>
+                                    <div className={"flex flex-row outline outline-[#1f1f21] px-2 py-1 rounded-sm gap-1 transition-colors hover:bg-[#3f873f] duration-300"}>
+                                        <FaNodeJs className={"translate-y-1"}></FaNodeJs>
+                                        NodeJS
+                                    </div>
+                                    <div className={"flex flex-row outline outline-[#1f1f21] px-2 py-1 rounded-sm gap-2 transition-colors hover:bg-[#212124] duration-300"}>
+                                        <RiNextjsFill className={"translate-y-1"}></RiNextjsFill>
+                                        NextJS
+                                    </div>
+                                    <div className={"flex flex-row outline outline-[#1f1f21] px-2 py-1 rounded-sm gap-1 transition-colors hover:bg-[#3178c6] duration-300"}>
+                                        <SiTypescript className={"translate-y-1"}></SiTypescript>
+                                        TypeScript
+                                    </div>
+                                    <div className={"flex flex-row outline outline-[#1f1f21] px-2 py-1 rounded-sm gap-1 transition-colors hover:bg-[#efd81d] duration-300"}>
+                                        <FaJsSquare className={"translate-y-1"}></FaJsSquare>
+                                        JavaScript
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={"flex flex-col gap-4"}>
+
+                            {/*projects*/}
+                            <div className={"flex flex-col outline outline-[#1f1f21] gap-2 bg-[#131314] rounded-lg p-4 pt-2"}>
+                                <div className={"flex items-center justify-center"}>
+                                    <span className={"text-gray-400 text-lg"}>Projects</span>
+                                </div>
+
+                                <div className={"flex flex-col gap-4 h-full"}>
+                                    <div className={"outline outline-[#1f1f21] rounded-lg p-4 pt-1 pb-8"}>
+                                        <div className={"flex items-center justify-center"}>
+                                            <Link href={"https://github.com/sinlessone/LunaBot"}>Luna Bot</Link>
+                                        </div>
+                                        <p className={"text-gray-400"}>A simple yet effective AIO discord bot built in DiscordJS</p>
+                                        <Link href={"https://github.com/sinlessone/LunaBot"}>
+                                            <span className={"text-gray-400/40"}>https://github.com/sinlessone/LunaBot</span>
+                                        </Link>
+                                    </div>
+                                    <div className={"outline outline-[#1f1f21] rounded-lg p-4 pt-1 pb-8"}>
+                                        <div className={"flex items-center justify-center"}>
+                                            <Link href={"https://github.com/sinlessone/LunaBot"}>Portfolio</Link>
+                                        </div>
+                                        <p className={"text-gray-400"}>This website! built in Next.js, mostly for learning</p>
+                                        <Link href={"https://github.com/sinlessone/LunaBot"}>
+                                            <span className={"text-gray-400/40 transition-all text-shadow-sm ease-in-out hover:text-shadow-gray-400/90 hover:animate-bounce duration-400"}>https://github.com/sinlessone/LunaBot</span>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            {/*contacts*/}
+                        <Contacts/>
+                        </div>
+                    </div>
+                {/*music player*/}
+                <MusicPlayer/>
+            </div>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    )
+
 }
