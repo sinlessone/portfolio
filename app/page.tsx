@@ -101,7 +101,7 @@ export default function Home() {
                                     </div>
                                     <div className={"outline outline-[#1f1f21] rounded-lg p-4 pt-1 pb-8"}>
                                         <div className={"flex items-center justify-center"}>
-                                            <Link href={"https://github.com/sinlessone/LunaBot"}>Portfolio</Link>
+                                            <Link href={"https://github.com/sinlessone/portfolio"}>Portfolio</Link>
                                         </div>
                                         <p className={"text-gray-400"}>This website! built in Next.js, mostly for learning</p>
                                         <Link href={"https://github.com/sinlessone/LunaBot"}>
