@@ -1,8 +1,7 @@
 "use client"
 import React, {useState} from 'react';
-import { FaJsSquare, FaLastfmSquare, FaPause, FaPlay, FaCheck, FaDiscord, FaGithub, FaNodeJs } from "react-icons/fa";
-import { SiTypescript, SiNamemc, SiAnilist, SiDiscorddotjs, SiTailwindcss } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
+import { FaLastfmSquare, FaCheck, FaDiscord, FaGithub } from "react-icons/fa";
+import { SiNamemc, SiAnilist} from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 

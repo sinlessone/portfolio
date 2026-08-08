@@ -55,7 +55,9 @@ const MusicPlayer = () => {
                 }
             }}>
                 <div className={`flex items-center justify-center h-screen w-screen fixed inset-0 bg-[#121212] z-2 transition duration-400 cursor-pointer ${clicked ? "opacity-0" : "opacity-100"} ${clicked ? "pointer-events-none" : "pointer-events-auto"}`}>
-                    <div className={"flex items-center justify-center w-[20%] h-[15%] outline outline-[#1f1f21] rounded-md"}>hi</div>
+                    <div className={"flex items-center justify-center w-[20%] h-[15%] outline outline-[#1f1f21] rounded-md transition-all duration-500 ease-in-out hover:-translate-y-2"}>
+                        <span className={"text-lg "}>Click Anywhere!</span>
+                    </div>
                 </div>
             </button>
 

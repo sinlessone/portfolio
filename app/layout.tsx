@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto, Rubik } from "next/font/google";
 import "@/app/globals.css"
-import {SiteHeader} from "@/app/luna/components/header";
 import React from "react";
 
 const geistSans = Geist({
