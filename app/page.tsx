@@ -104,8 +104,8 @@ export default function Home() {
                                             <Link href={"https://github.com/sinlessone/portfolio"}>Portfolio</Link>
                                         </div>
                                         <p className={"text-gray-400"}>This website! built in Next.js, mostly for learning</p>
-                                        <Link href={"https://github.com/sinlessone/LunaBot"}>
-                                            <span className={"text-gray-400/40 transition-all text-shadow-sm ease-in-out hover:text-shadow-gray-400/90 hover:animate-bounce duration-400"}>https://github.com/sinlessone/LunaBot</span>
+                                        <Link href={"https://github.com/sinlessone/portfolio"}>
+                                            <span className={"text-gray-400/40 transition-all text-shadow-sm ease-in-out hover:text-shadow-gray-400/90 hover:animate-bounce duration-400"}>https://github.com/sinlessone/portfolio</span>
                                         </Link>
                                     </div>
                                 </div>
