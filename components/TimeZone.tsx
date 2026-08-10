@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { getTimezoneOffset, formatInTimeZone } from 'date-fns-tz'
 
