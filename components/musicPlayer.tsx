@@ -1,5 +1,5 @@
 "use client"
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import {FaPause, FaPlay} from "react-icons/fa";
@@ -11,6 +11,25 @@ const MusicPlayer = () => {
     const [clicked, setClicked] = useState(false);
     const [duration, setDuration] = useState(0);
     const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const currentAudio = audioRef.current;
+        if (!currentAudio) return;
+        function handleLoad() {
+            setLoading(false);
+        }
+        if (currentAudio.readyState >= 2) {
+            handleLoad();
+        }
+        currentAudio.addEventListener("loadeddata", handleLoad);
+        currentAudio.addEventListener("canplay", handleLoad)
+
+        return () => {
+            currentAudio.removeEventListener("loadeddata", handleLoad);
+            currentAudio.removeEventListener("canplay", handleLoad);
+        }
+
+    }, [])
 
 
 
@@ -121,7 +140,6 @@ const MusicPlayer = () => {
                     setPlaying(false)
                 }}
                 onPlay={() => {
-                    setLoading(false)
                     setPlaying(true)
                 }}
 
