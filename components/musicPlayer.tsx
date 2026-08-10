@@ -11,6 +11,10 @@ const MusicPlayer = () => {
     const [clicked, setClicked] = useState(false);
     const [duration, setDuration] = useState(0);
 
+
+
+
+
     function handleSeek(e: React.ChangeEvent<HTMLInputElement>) {
         const newTime = Number(e.currentTarget.value)
         if (audioRef.current) {

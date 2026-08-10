@@ -5,8 +5,7 @@ import { SiTypescript, SiDiscorddotjs, SiTailwindcss } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import MusicPlayer from "@/components/musicPlayer";
 import Contacts from "@/components/contacts";
-
-
+import TimeZone from "@/components/TimeZone";
 
 
 
@@ -21,7 +20,7 @@ export default function Home() {
 
                             <div className={"outline outline-[#1f1f21] bg-[#131314] p-4 rounded-lg"}>
                                 <div className={"flex items-center justify-center"}>
-                                    <Image src={"/pfp.webp"} alt={"pfp"} width={60} height={60} className={"rounded-full"}></Image>
+                                    <Image src={"/pfp.webp"} alt={"pfp"} width={60} height={60} className={"rounded-full h-auto"}></Image>
                                 </div>
                                 <div className={"flex flex-row whitespace-nowrap w-full gap-5 p-4"}>
                                     <span className={"text-gray-200 text-3xl shimmer shimmer-color-purple-400 shimmer-duration-3000"}>Moh</span>
@@ -42,7 +41,7 @@ export default function Home() {
                             {/*about me*/}
                             <div className={"outline outline-[#1f1f21] bg-[#131314] p-4 rounded-lg w-125"}>
                                 <div className={"flex items-center justify-center"}>
-                                    <span>Who am I?</span>
+                                    <span className={"text-gray-400 text-lg"}>Who am I?</span>
                                 </div>
                                 <div className={"text-center"}>I am Moh, a 17 year old student from Algeria, I specialize in creating discord bots in Discordjs <SiDiscorddotjs color={"#35376A"} className={"inline-block"}/> and currently learning full stack to create websites in NextJS <RiNextjsFill color={"#35376A"} className={"inline-block"}/>, and always eager to learn more</div>
                             </div>
@@ -90,7 +89,7 @@ export default function Home() {
                                 </div>
 
                                 <div className={"flex flex-col gap-4 h-full"}>
-                                    <div className={"outline outline-[#1f1f21] rounded-lg p-4 pt-1 pb-8"}>
+                                    <div className={"outline outline-[#1f1f21] rounded-lg p-2 pt-1"}>
                                         <div className={"flex items-center justify-center"}>
                                             <Link href={"https://github.com/sinlessone/LunaBot"}>Luna Bot</Link>
                                         </div>
@@ -99,7 +98,7 @@ export default function Home() {
                                             <span className={"text-gray-400/40"}>https://github.com/sinlessone/LunaBot</span>
                                         </Link>
                                     </div>
-                                    <div className={"outline outline-[#1f1f21] rounded-lg p-4 pt-1 pb-8"}>
+                                    <div className={"outline outline-[#1f1f21] rounded-lg p-2 pt-1"}>
                                         <div className={"flex items-center justify-center"}>
                                             <Link href={"https://github.com/sinlessone/portfolio"}>Portfolio</Link>
                                         </div>
@@ -111,7 +110,8 @@ export default function Home() {
                                 </div>
                             </div>
                             {/*contacts*/}
-                        <Contacts/>
+                            <Contacts/>
+                            <TimeZone/>
                         </div>
                     </div>
                 {/*music player*/}
