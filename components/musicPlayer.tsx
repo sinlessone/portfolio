@@ -10,8 +10,7 @@ const MusicPlayer = () => {
     const [currentTime, setCurrentTime] = useState(0);
     const [clicked, setClicked] = useState(false);
     const [duration, setDuration] = useState(0);
-
-
+    const [loading, setLoading] = useState(true);
 
 
 
@@ -37,7 +36,6 @@ const MusicPlayer = () => {
         if (playing) {
             audioRef.current.pause();
             setPlaying(false);
-
         } else {
             audioRef.current.play();
             setPlaying(true);
@@ -50,7 +48,6 @@ const MusicPlayer = () => {
             <button className={"absolute"} onClick={() => {
                 setClicked(true)
                 if (!audioRef.current) return
-
                 audioRef.current.play();
                 audioRef.current.volume = 0.3
                 setDuration(audioRef.current.duration)
@@ -93,7 +90,10 @@ const MusicPlayer = () => {
                 </div>
                 <div className={"flex flex-row items-center justify-center"}>
                     <Button onClick={handlePlay}>
-                        {playing ? <div className={"flex flex-row items-center justify-center gap-1 p-1"}>
+                        {loading ? <div className={"flex flex-row items-center justify-center gap-1 p-1"}>
+                            <div className={"h-5 w-5 border border-gray-500 border-t-blue-400 animate-spin animation-duration-2000 rounded-full"}></div>
+                            <span>Loading</span>
+                        </div> : playing ? <div className={"flex flex-row items-center justify-center gap-1 p-1"}>
                             <FaPause></FaPause>
                             <span>Pause</span>
                         </div> : <div className={"flex flex-row items-center justify-center gap-1 p-1"}>
@@ -110,7 +110,8 @@ const MusicPlayer = () => {
                 src={"/prom.mp3"}
 
                 onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
-                onLoadedMetadata={(e) => {
+                onLoadedData={(e) => {
+                    setLoading(false)
                     setDuration(e.currentTarget.duration);
                 }}
                 onDurationChange={(e) => {
@@ -120,11 +121,12 @@ const MusicPlayer = () => {
                     setPlaying(false)
                 }}
                 onPlay={() => {
+                    setLoading(false)
                     setPlaying(true)
                 }}
 
-                onEnded={(e) => {setPlaying(false)}}
-            ></audio>
+                onEnded={() => {setPlaying(false)}}
+            />
         </div>
     );
 };
