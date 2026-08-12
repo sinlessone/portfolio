@@ -15,12 +15,12 @@ const TimeZone = () => {
     let message
     if (offset < 0) {
         message = `It is ${myTime} for me, that's ${offset / 1000 / 60 / 60} hours behind you.`
-    }
-    if (offset > 0 ) {
+    } else if (offset > 0 ) {
         message = `It is ${myTime} for me, that's ${offset / 1000 / 60 / 60} hours ahead of you.`
     } else {
         message = `It is ${myTime} for me, that's the same as you!`
     }
+
     return (
         <div className={"outline outline-[#1f1f21] gap-2 bg-[#131314] h-full rounded-md"}>
 
