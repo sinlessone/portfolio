@@ -11,11 +11,11 @@ import TimeZone from "@/components/TimeZone";
 
 export default function Home() {
     return (
-        <div className={"flex items-center justify-center h-screen "}>
+        <div className={"flex items-center justify-center min-h-screen overflow-x-hidden p-4"}>
             <div className={"flex flex-col items-center justify-center gap-4"}>
-                    <div className={"flex flex-row columns-2 gap-4"}>
+                    <div className={"flex flex-col md:flex-row columns-2 gap-4"}>
 
-                        <div className={"flex flex-col gap-4"}>
+                        <div className={"flex flex-col gap-4 w-full md:w-auto"}>
                             {/*main card*/}
 
                             <div className={"outline outline-[#1f1f21] bg-[#131314] p-4 rounded-lg"}>
@@ -27,7 +27,7 @@ export default function Home() {
                                     <div className={"h-px w-full translate-y-5 from-white/50 to-gray-800 bg-linear-to-r"}></div>
                                 </div>
                                 <div className={"flex items-center justify-center text-gray-500 shimmer shimmer-color-blue-400 shimmer-duration-4000"}>
-                                    <div className={"flex flex-row gap-12"}>
+                                    <div className={"flex flex-row gap-4 md:gap-12"}>
                                         <span>Developer</span>
                                         <span>·</span>
                                         <span>Music Enthusiast</span>
@@ -39,7 +39,7 @@ export default function Home() {
                             </div>
 
                             {/*about me*/}
-                            <div className={"outline outline-[#1f1f21] bg-[#131314] p-4 rounded-lg w-125"}>
+                            <div className={"outline outline-[#1f1f21] bg-[#131314] p-4 rounded-lg w-full md:w-125"}>
                                 <div className={"flex items-center justify-center"}>
                                     <span className={"text-gray-400 text-lg"}>Who am I?</span>
                                 </div>
@@ -47,7 +47,7 @@ export default function Home() {
                             </div>
 
                             {/*tech stack*/}
-                            <div className={"outline  outline-[#1f1f21] rounded-lg p-4 pt-2 bg-[#131314] w-125"}>
+                            <div className={"outline  outline-[#1f1f21] rounded-lg p-4 pt-2 bg-[#131314] w-full md:w-125"}>
                                 <div className={"flex items-center justify-center"}>
                                     <span className={"text-gray-400 text-lg pb-2"}>Tech Stack</span>
                                 </div>
@@ -80,7 +80,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className={"flex flex-col gap-4"}>
+                        <div className={"flex flex-col gap-4 w-full md:w-auto"}>
 
                             {/*projects*/}
                             <div className={"flex flex-col outline outline-[#1f1f21] gap-2 bg-[#131314] rounded-lg p-4 pt-2"}>

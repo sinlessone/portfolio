@@ -13,7 +13,7 @@ const Contacts = () => {
         await navigator.clipboard.writeText(text);
     }
     return (
-        <div className={"flex flex-col gap-2 outline outline-[#1f1f21] h-full bg-[#131314] rounded-lg p-4 pt-2 items-center w-119"}>
+        <div className={"flex flex-col gap-2 outline outline-[#1f1f21] h-full bg-[#131314] rounded-lg p-4 pt-2 items-center w-full md:w-119"}>
             <div className={"flex items-center justify-center"}>
                 <span className={"text-gray-400 text-lg"}>Contacts and Socials</span>
             </div>
