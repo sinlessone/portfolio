@@ -5,6 +5,7 @@ import { SiTypescript, SiDiscorddotjs, SiTailwindcss } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import MusicPlayer from "@/components/musicPlayer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import Contacts from "@/components/contacts";
 import TimeZone from "@/components/TimeZone";
 
@@ -13,6 +14,7 @@ import TimeZone from "@/components/TimeZone";
 export default function Home() {
     return (
         <div className={"flex items-center justify-center min-h-screen overflow-x-hidden p-4"}>
+            <Analytics/>
             <SpeedInsights/>
             <div className={"flex flex-col items-center justify-center gap-4"}>
                     <div className={"flex flex-col md:flex-row columns-2 gap-4"}>
