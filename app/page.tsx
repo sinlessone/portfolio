@@ -47,7 +47,7 @@ export default function Home() {
                                 <div className={"flex items-center justify-center"}>
                                     <span className={"text-gray-400 text-lg"}>Who am I?</span>
                                 </div>
-                                <div className={"text-center"}>I am Moh, a 17 year old student from Algeria, I specialize in creating discord bots in Discordjs <SiDiscorddotjs color={"#35376A"} className={"inline-block"}/> and currently learning full stack to create websites in NextJS <RiNextjsFill color={"#35376A"} className={"inline-block"}/>, and always eager to learn more</div>
+                                <div className={"text-center"}>I am Moh, an 18 year old student from Algeria, I specialize in creating discord bots in Discordjs <SiDiscorddotjs color={"#35376A"} className={"inline-block"}/> and currently learning full stack to create websites in NextJS <RiNextjsFill color={"#35376A"} className={"inline-block"}/>, and always eager to learn more</div>
                             </div>
 
                             {/*tech stack*/}
